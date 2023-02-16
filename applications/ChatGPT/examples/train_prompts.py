@@ -1,10 +1,15 @@
 import argparse
 from copy import deepcopy
+import os
+import sys
+ROOT_PATH = os.path.abspath(os.path.dirname(os.getcwd()))
+print(ROOT_PATH)
+sys.path.append(ROOT_PATH)
 
 import pandas as pd
-from ..chatgpt.nn import BLOOMActor, BLOOMCritic, GPTActor, GPTCritic, OPTActor, OPTCritic, RewardModel
-from ..chatgpt.trainer import PPOTrainer
-from ..chatgpt.trainer.strategies import ColossalAIStrategy, DDPStrategy, NaiveStrategy
+from chatgpt.nn import BLOOMActor, BLOOMCritic, GPTActor, GPTCritic, OPTActor, OPTCritic, RewardModel
+from chatgpt.trainer import PPOTrainer
+from chatgpt.trainer.strategies import ColossalAIStrategy, DDPStrategy, NaiveStrategy
 from torch.optim import Adam
 from transformers import AutoTokenizer, BloomTokenizerFast
 from transformers.models.gpt2.tokenization_gpt2 import GPT2Tokenizer
