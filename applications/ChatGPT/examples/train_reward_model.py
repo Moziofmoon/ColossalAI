@@ -1,4 +1,9 @@
 import argparse
+import os
+import sys
+ROOT_PATH = os.path.abspath(os.path.dirname(os.getcwd()))
+sys.path.append(ROOT_PATH)
+
 
 import loralib as lora
 import torch
