@@ -2,9 +2,9 @@ import argparse
 from copy import deepcopy
 
 import pandas as pd
-from chatgpt.nn import BLOOMActor, BLOOMCritic, GPTActor, GPTCritic, OPTActor, OPTCritic, RewardModel
-from chatgpt.trainer import PPOTrainer
-from chatgpt.trainer.strategies import ColossalAIStrategy, DDPStrategy, NaiveStrategy
+from ..chatgpt.nn import BLOOMActor, BLOOMCritic, GPTActor, GPTCritic, OPTActor, OPTCritic, RewardModel
+from ..chatgpt.trainer import PPOTrainer
+from ..chatgpt.trainer.strategies import ColossalAIStrategy, DDPStrategy, NaiveStrategy
 from torch.optim import Adam
 from transformers import AutoTokenizer, BloomTokenizerFast
 from transformers.models.gpt2.tokenization_gpt2 import GPT2Tokenizer

@@ -13,7 +13,7 @@ from chatgpt.trainer.strategies import ColossalAIStrategy
 
 def train(prompts):
 
-    strategy = ColossalAIStrategy (stage=3, placement_policy='cuda')
+    strategy = ColossalAIStrategy(stage=3, placement_policy='cuda')
 
     with strategy.model_init_context ():
         actor = GPTActor().cuda()

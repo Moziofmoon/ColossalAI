@@ -15,4 +15,4 @@ set_n_least_used_CUDA_VISIBLE_DEVICES() {
 
 set_n_least_used_CUDA_VISIBLE_DEVICES 1
 
-python train_prompts.py prompts.csv --pretrain '/data2/users/lczht/bloom-560m' --lora_rank 16
+python train_prompts.py datasets/prompts.csv --pretrain '/data2/users/lczht/bloom-560m' --lora_rank 16
