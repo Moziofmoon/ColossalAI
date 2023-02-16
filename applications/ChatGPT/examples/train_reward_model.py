@@ -2,6 +2,7 @@ import argparse
 import os
 import sys
 ROOT_PATH = os.path.abspath(os.path.dirname(os.getcwd()))
+print(ROOT_PATH)
 sys.path.append(ROOT_PATH)
 
 
